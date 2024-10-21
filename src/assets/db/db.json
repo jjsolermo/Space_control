@@ -1,0 +1,50 @@
+{
+    "database": "app.db",
+    "version": 1,
+    "encrypted": false,
+    "mode": "full",
+    "tables": [
+        {
+            "name": "ships",
+            "schema": [
+                {
+                    "column": "Id",
+                    "value": "INT NOT NULL PRIMARY KEY"
+                },
+                {
+                    "column": "Code",
+                    "value": "TEXT NOT NULL"
+                },
+                {
+                    "column": "Name",
+                    "value": "TEXT NOT NULL"
+                },
+                {
+                    "column": "Cost",
+                    "value": "INT NOT NULL"
+                },
+                {
+                    "column": "HullSize",
+                    "value": "INT NOT NULL"
+                }
+            ]
+        },
+        {
+            "name": "games",
+            "schema": [
+                {
+                    "column": "Id",
+                    "value": "INT NOT NULL PRIMARY KEY"
+                },
+                {
+                    "column": "Name",
+                    "value": "TEXT NOT NULL"
+                },
+                {
+                    "column": "Date",
+                    "value": "TEXT NOT NULL"
+                }
+            ]
+        }
+    ]
+}

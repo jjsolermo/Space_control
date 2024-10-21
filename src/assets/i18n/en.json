@@ -1,0 +1,16 @@
+{
+    "LOGIN":{
+        "NUEVA": "New game",
+        "LOAD": "Load game"
+    },
+    "ERROR":{
+        "NOGAME": "No saved games"
+    },
+    "MAIN":{
+        "SHIPS": "Ships",
+        "TECNOLOGY": "Tecnology",
+        "COLONY": "Colonies",
+        "PAY": "Income",
+        "MENU": "Main"
+    }
+}

@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div class="head-custom">
+      <ion-icon class="icon-head" name="menu-outline" (click)="open()"></ion-icon>
+      <ion-title>Total CP's : {{total}}</ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-list  class="menu-list" *ngIf="isVisibleList" [inset]="true">
+    <ion-item class="icon-list" (click)="navegarA(1)">
+      <ion-label><ion-icon name="rocket-outline" class="icon-list-custom"></ion-icon>{{'MAIN.SHIPS' | translate}}</ion-label>
+    </ion-item>
+    <ion-item class="icon-list" (click)="navegarA(2)">
+      <ion-label><ion-icon name="construct-outline" class="icon-list-custom"></ion-icon>{{'MAIN.TECNOLOGY' | translate}}</ion-label>
+    </ion-item>
+    <ion-item class="icon-list" (click)="navegarA(3)">
+      <ion-label><ion-icon name="earth-outline" class="icon-list-custom"></ion-icon>{{'MAIN.COLONY' | translate}}</ion-label>
+    </ion-item>
+    <ion-item class="icon-list" (click)="navegarA(4)">
+      <ion-label><ion-icon name="cash-outline" class="icon-list-custom"></ion-icon>{{'MAIN.PAY' | translate}}</ion-label>
+    </ion-item>
+    <ion-item class="icon-list" (click)="navegarA(5)">
+      <ion-label><ion-icon name="home-outline" class="icon-list-custom"></ion-icon>{{'MAIN.MENU' | translate}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

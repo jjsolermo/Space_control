@@ -1,0 +1,16 @@
+{
+    "LOGIN":{
+        "NEW": "Nueva partida",
+        "LOAD": "Cargar partida"
+    },
+    "ERROR":{
+        "NOGAME": "No hay partidas guardadas"
+    },
+    "MAIN":{
+        "SHIPS": "Naves",
+        "TECNOLOGY": "Tecnología",
+        "COLONY": "Colonias",
+        "PAY": "Ingresos",
+        "MENU": "Principal"
+    }
+}

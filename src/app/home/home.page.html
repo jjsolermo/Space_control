@@ -1,0 +1,17 @@
+<ion-content [fullscreen]="true">
+  <div class="duv_custom">
+    <ion-button (click)="newGame()" expand="block">{{"LOGIN.NEW" |translate}}</ion-button>
+  </div>
+  <div class="duv_custom">
+    <ion-button (click)="loadGame()" expand="block">{{"LOGIN.LOAD" |translate}}</ion-button>
+  </div>
+  <ion-grid>
+    <ion-row *ngFor="let ship of listGames">
+      <ion-col style="font-size: 65%;border: solid 1px;cursor: pointer;" (click)="carga(ship.name)">{{ship.name}}</ion-col>
+      <ion-col style="font-size: 65%;border: solid 1px;">{{ship.date}}</ion-col>
+
+    </ion-row>
+  </ion-grid>
+  
+
+</ion-content>
