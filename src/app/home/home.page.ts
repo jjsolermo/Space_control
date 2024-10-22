@@ -21,14 +21,14 @@ export class HomePage {
 
   // Al entrar, leemos la base de datos
   ionViewWillEnter(){
-    this.read();
-    this.sqlite.getLastIdGame().then( (id: number) => {
-      this.idGame = id;
-    }
-    ).catch(err => {
-      console.error(err);
-      console.error("Error al leer");
-    })
+    // this.read();
+    // this.sqlite.getLastIdGame().then( (id: number) => {
+    //   this.idGame = id;
+    // }
+    // ).catch(err => {
+    //   console.error(err);
+    //   console.error("Error al leer");
+    // })
   }
 
   async carga(ship: string){
@@ -37,18 +37,29 @@ export class HomePage {
   }
 
   async newGame(){
-    await this.sqlite.createGame(this.idGame + 1, 'game_' + new Date().getTime(), new Date().toDateString());
+    this.storage.clear();
+    await this.storage.set('game', 'game_' + new Date().getTime());
+    this.router.navigate(['/main']);
+    //await this.sqlite.createGame(this.idGame + 1, 'game_' + new Date().getTime(), new Date().toDateString());
     
   }
 
   async loadGame(){
-    await this.sqlite.getAllGames().then( (games: string[]) => {
-      this.listGames = games;
+
+    let partida = await this.storage.get('game');
+    if(partida){
+      this.router.navigate(['/main']);
     }
-    ).catch(err => {
-      console.error(err);
-      console.error("Error al leer");
-    })
+    else{
+      console.log("No hay partida");
+    }
+    // await this.sqlite.getAllGames().then( (games: string[]) => {
+    //   this.listGames = games;
+    // }
+    // ).catch(err => {
+    //   console.error(err);
+    //   console.error("Error al leer");
+    // })
 
   }
 

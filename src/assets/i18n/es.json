@@ -12,5 +12,22 @@
         "COLONY": "Colonias",
         "PAY": "Ingresos",
         "MENU": "Principal"
+    },
+    "TEC":{
+        "NAVESGRANDES": "Naves grandes",
+        "ATAQUE": "Ataque",
+        "DEFENSA": "Defensa",
+        "TACTICA": "Tactica",
+        "MOVIMIENTO": "Movimiento",
+        "TERRAFORMACION": "Terraformación",
+        "EXPLORACION": "Expliración",
+        "ASTILLEROS": "Astilleros",
+        "PUNTO": "Punto de Defensa",
+        "CAZAS": "Cazas",
+        "OCULTACION": "Ocultación",
+        "DETECCION": "Detección",
+        "MINAS": "Minas",
+        "DRAGAMINAS": "Dragaminas"
     }
+    
 }

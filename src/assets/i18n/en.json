@@ -12,5 +12,21 @@
         "COLONY": "Colonies",
         "PAY": "Income",
         "MENU": "Main"
+    },
+    "TEC":{
+        "NAVESGRANDES": "Big ships",
+        "ATAQUE": "Attack",
+        "DEFENSA": "Defense",
+        "TACTICA": "Tactic",
+        "MOVIMIENTO": "Movement",
+        "TERRAFORMACION": "Terraforming",
+        "EXPLORACION": "Exploration",
+        "ASTILLEROS": "Shipyards",
+        "PUNTO": "Defense point",
+        "CAZAS": "Hunters",
+        "OCULTACION": "Concealment",
+        "DETECCION": "Detection",
+        "MINAS": "Mines",
+        "DRAGAMINAS": "Minesweeper"
     }
 }

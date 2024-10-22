@@ -5,6 +5,7 @@ import { Device } from '@capacitor/device';
 import { Preferences } from '@capacitor/preferences';
 import { JsonSQLite } from 'jeep-sqlite/dist/types/interfaces/interfaces';
 import { BehaviorSubject } from 'rxjs';
+import { constants } from '../share/constants';
 
 @Injectable({
   providedIn: 'root'
@@ -67,7 +68,7 @@ export class SqliteService {
       this.downloadDatabase();
     } else {
       // Nos volvemos a conectar
-      this.dbName = await this.getDbName();
+      this.dbName = constants.dbName; //await this.getDbName();
       await CapacitorSQLite.createConnection({ database: this.dbName });
       await CapacitorSQLite.open({ database: this.dbName })
       this.dbReady.next(true);
@@ -79,7 +80,7 @@ export class SqliteService {
   downloadDatabase() {
 
     // Obtenemos el fichero assets/db/db.json
-    this.http.get('assets/db/db.json').subscribe(async (jsonExport: JsonSQLite) => {
+    this.http.get('../assets/db/db.json').subscribe(async (jsonExport: JsonSQLite) => {
 
 
       const jsonstring = JSON.stringify(jsonExport);

@@ -4,6 +4,22 @@ import { Ship } from "./Ship";
 export class constants {
     public static readonly game = 'game';
     public static readonly total = 'total';
+    public static readonly dbName = 'appDb';
+    public static readonly NavesGrandes ='NavesGrandes'
+    public static readonly Ataque = 'Ataque'
+    public static readonly Defensa = 'Defensa'
+    public static readonly Tactica = 'Tactica'
+    public static readonly Movimiento = 'Movimiento'
+    public static readonly Terraformación = 'Terraformación'
+    public static readonly Exploración = 'Exploración'
+    public static readonly Astilleros = 'Astilleros'
+    public static readonly PuntoDeDefensa = 'PuntoDeDefensa'
+    public static readonly Cazas = 'Cazas'
+    public static readonly Ocultación = 'Ocultación'
+    public static readonly Detección = 'Detección'
+    public static readonly Minas = 'Minas'
+    public static readonly Dragaminas = 'Dragaminas'
+    public static readonly Flota = 'Flota'
 
 }
 

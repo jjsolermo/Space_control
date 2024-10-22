@@ -25,4 +25,74 @@
       <ion-label><ion-icon name="home-outline" class="icon-list-custom"></ion-icon>{{'MAIN.MENU' | translate}}</ion-label>
     </ion-item>
   </ion-list>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="tec tec_color">
+        <p>Tecnologias disponibles</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="tec" *ngIf="NavesGrandes > 0">
+        <label>{{'TEC.NAVESGRANDES' | translate}} {{NavesGrandes}}</label>
+      </ion-col>
+      <ion-col class="tec" *ngIf="Ataque > 0">
+        <label>{{'TEC.ATAQUE' | translate}} {{Ataque}}</label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="tec" *ngIf="Defensa > 0">
+        <label>{{'TEC.DEFENSA' | translate}} {{Defensa}}</label>
+      </ion-col>
+      <ion-col class="tec" *ngIf="Tactica > 0">
+        <label>{{'TEC.TACTICA' | translate}} {{Tactica}}</label>
+      </ion-col>    
+    </ion-row>
+    <ion-row>
+      <ion-col class="tec" *ngIf="Movimiento > 0">
+        <label>{{'TEC.MOVIMIENTO' | translate}} {{Movimiento}}</label>
+      </ion-col>
+      <ion-col class="tec" *ngIf="Terraformacion > 0">
+        <label>{{'TEC.TERRAFORMACION' | translate}} {{Terraformacion}}</label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="tec" *ngIf="Exploracion > 0">
+        <label>{{'TEC.EXPLORACION' | translate}} {{Exploracion}}</label>
+      </ion-col>
+      <ion-col class="tec" *ngIf="Astilleros > 0">
+        <label>{{'TEC.ASTILLEROS' | translate}} {{Astilleros}}</label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="tec" *ngIf="Cazas > 0">
+        <label>{{'TEC.CAZAS' | translate}} {{Cazas}}</label>
+      </ion-col>
+      <ion-col class="tec" *ngIf="Punto > 0">
+        <label>{{'TEC.PUNTO' | translate}} {{Punto}}</label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="tec" *ngIf="Ocultacion > 0">
+        <label>{{'TEC.OCULTACION' | translate}} {{Ocultacion}}</label>
+      </ion-col>
+      <ion-col class="tec" *ngIf="Deteccion > 0">
+        <label>{{'TEC.DETECCION' | translate}} {{Deteccion}}</label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="tec" *ngIf="Minas > 0">
+        <label>{{'TEC.MINAS' | translate}} {{Minas}}</label>
+      </ion-col>
+      <ion-col class="tec" *ngIf="Dragaminas > 0">
+        <label>{{'TEC.DRAGAMINAS' | translate}} {{Dragaminas}}</label>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="tec tec_color">
+        <p>Flota</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
