@@ -2,7 +2,7 @@
   <ion-toolbar>
     <div class="head-custom">
       <ion-icon class="icon-head" name="menu-outline" (click)="open()"></ion-icon>
-      <ion-title>Total CP's : {{total}}</ion-title>
+      <ion-title>Total CP's : {{total}} <ion-icon name="refresh-circle-outline" style="cursor: pointer;" (click)="reinicia()"></ion-icon></ion-title>
     </div>
   </ion-toolbar>
 </ion-header>
@@ -88,11 +88,59 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  <ion-grid>
-    <ion-row>
-      <ion-col class="tec tec_color">
-        <p>Flota</p>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <div class="flota">
+    <p class="tec tec_color" style="margin-left: 3%;">Flota</p>
+    <ion-searchbar animated="true" placeholder="Buscar...." [debounce]="1000" (ionInput)="handleInput($event)"></ion-searchbar>
+    <div *ngFor="let nave of results" class="flotaList">
+      <ion-card *ngIf="nave.activo === true">
+        <ion-card-header>
+          <ion-card-title class="headCard" >
+            <div style="width: 100%;display: inline-flex;">
+              {{nave.type}} <ion-icon name="trash-outline" color="danger" style="cursor:pointer;margin-left:50%" (click)="eliminiarNave(nave)"></ion-icon>           
+            </div>
+          </ion-card-title>  
+          <ion-card-subtitle class="tec">
+            <ion-button fill="clear" color="info" (click)="up(nave)">+</ion-button>
+           {{nave.cantidad}}
+            <ion-button fill="clear" color="info" (click)="down(nave)">-</ion-button>
+          </ion-card-subtitle>
+        </ion-card-header>   
+        <ion-card-content>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                Ataque:{{nave.ataque}}
+              </ion-col>
+              <ion-col>
+                Defensa:{{nave.defensa}}
+              </ion-col>
+              <ion-col>
+                Tactica:{{nave.tactica}}
+              </ion-col>
+              <ion-col>
+                Movimiento:{{nave.movimiento}}
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-label  *ngIf="nave.type.includes('SC') && nave.activo === true"> Punto de Defensa:{{nave.puntoDeDefensa}}</ion-label>
+                <ion-label  *ngIf="nave.type.includes('DD') && nave.activo === true"> Detección:{{nave.deteccion}}</ion-label>
+                <ion-label  *ngIf="nave.type.includes('CA') && nave.activo === true"> Exploración:{{nave.exploracion}}</ion-label>
+                <ion-label  *ngIf="nave.type.includes('Fighter') && nave.activo === true"> Cazas:{{nave.cazas}}</ion-label>
+                <ion-label  *ngIf="nave.type.includes('Raider') && nave.activo === true"> Ocultación:{{nave.ocultacion}}</ion-label>
+                <ion-label  *ngIf="nave.type.includes('SW') && nave.activo === true"> Dragaminas:{{nave.dragaminas}}</ion-label>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        <!-- <ion-label class="tec" *ngIf="nave.activo === true">Ataque:{{nave.ataque}} ,Defensa:{{nave.defensa}} ,Tactica:{{nave.tactica}} ,Movimiento:{{nave.movimiento}}</ion-label>
+        <ion-label class="tec" *ngIf="nave.type.includes('SC') && nave.activo === true"> Punto de Defensa:{{nave.puntoDeDefensa}}</ion-label>
+        <ion-label class="tec" *ngIf="nave.type.includes('DD') && nave.activo === true"> Detección:{{nave.deteccion}}</ion-label>
+        <ion-label class="tec" *ngIf="nave.type.includes('CA') && nave.activo === true"> Exploración:{{nave.exploracion}}</ion-label>
+        <ion-label class="tec" *ngIf="nave.type.includes('Fighter') && nave.activo === true"> Cazas:{{nave.cazas}}</ion-label>
+        <ion-label class="tec" *ngIf="nave.type.includes('Raider') && nave.activo === true"> Ocultación:{{nave.ocultacion}}</ion-label>
+        <ion-label class="tec" *ngIf="nave.type.includes('SW') && nave.activo === true"> Dragaminas:{{nave.dragaminas}}</ion-label> -->
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
 </ion-content>

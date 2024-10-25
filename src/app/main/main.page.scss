@@ -1,6 +1,17 @@
+.flotaList{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.headCard{
+    color: cornflowerblue;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: bold;
+}
 .tec{
-    font-size: 83%;
     font-family: serif;
+    font-size: 83%;
 }
 .tec_color{
     color: cornflowerblue;
