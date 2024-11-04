@@ -1,9 +1,11 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <div class="head-custom">
+    <div class="head-custom" style="display: flex;">
       <ion-icon class="icon-head" name="menu-outline" (click)="open()"></ion-icon>
-      <ion-title>Total CP's : {{total}} <ion-icon name="refresh-circle-outline" style="cursor: pointer;" (click)="reinicia()"></ion-icon></ion-title>
+      <ion-title>Total CP's : {{total}}</ion-title>
+      <ion-button fill="clear" color="success" (click)="newGame()">{{'MAIN.NEW' | translate}}</ion-button>
     </div>
+
   </ion-toolbar>
 </ion-header>
 

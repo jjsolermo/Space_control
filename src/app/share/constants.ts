@@ -44,13 +44,13 @@ export const shipList: Array<Ship> = [
 ];
 
 export const flota  = [
-    {type:'Colony 1',cantidad:1,ataque:0,maxAtaque:0,defensa:0,maxDefensa:0,tactica:0,maxTactica:0,movimiento:1,maxMovimiento:1,activo:true},
-    {type:'Colony 2',cantidad:1,ataque:0,maxAtaque:0,defensa:0,maxDefensa:0,tactica:0,maxTactica:0,movimiento:1,maxMovimiento:1,activo:true},
-    {type:'Colony 3',cantidad:1,ataque:0,maxAtaque:0,defensa:0,maxDefensa:0,tactica:0,maxTactica:0,movimiento:1,maxMovimiento:1,activo:true},
-    {type:'Colony 4',cantidad:1,ataque:0,maxAtaque:0,defensa:0,maxDefensa:0,tactica:0,maxTactica:0,movimiento:1,maxMovimiento:1,activo:false},
-    {type:'Colony 5',cantidad:1,ataque:0,maxAtaque:0,defensa:0,maxDefensa:0,tactica:0,maxTactica:0,movimiento:1,maxMovimiento:1,activo:false},
-    {type:'Miner 1',cantidad:1,ataque:0,maxAtaque:0,defensa:0,maxDefensa:0,tactica:0,maxTactica:0,movimiento:1,maxMovimiento:1,activo:true},
-    {type:'Miner 2',cantidad:1,ataque:0,maxAtaque:0,defensa:0,maxDefensa:0,tactica:0,maxTactica:0,movimiento:1,maxMovimiento:1,activo:false},
+    {type:'Colony #1',cantidad:1,ataque:0,maxAtaque:0,defensa:0,maxDefensa:0,tactica:0,maxTactica:0,movimiento:1,maxMovimiento:1,activo:true},
+    {type:'Colony #2',cantidad:1,ataque:0,maxAtaque:0,defensa:0,maxDefensa:0,tactica:0,maxTactica:0,movimiento:1,maxMovimiento:1,activo:true},
+    {type:'Colony #3',cantidad:1,ataque:0,maxAtaque:0,defensa:0,maxDefensa:0,tactica:0,maxTactica:0,movimiento:1,maxMovimiento:1,activo:true},
+    {type:'Colony #4',cantidad:1,ataque:0,maxAtaque:0,defensa:0,maxDefensa:0,tactica:0,maxTactica:0,movimiento:1,maxMovimiento:1,activo:false},
+    {type:'Colony #5',cantidad:1,ataque:0,maxAtaque:0,defensa:0,maxDefensa:0,tactica:0,maxTactica:0,movimiento:1,maxMovimiento:1,activo:false},
+    {type:'Miner #1',cantidad:1,ataque:0,maxAtaque:0,defensa:0,maxDefensa:0,tactica:0,maxTactica:0,movimiento:1,maxMovimiento:1,activo:true},
+    {type:'Miner #2',cantidad:1,ataque:0,maxAtaque:0,defensa:0,maxDefensa:0,tactica:0,maxTactica:0,movimiento:1,maxMovimiento:1,activo:false},
     {type:'SC #1',cantidad:1,ataque:0,maxAtaque:1,defensa:0,maxDefensa:1,tactica:0,maxTactica:3,movimiento:1,maxMovimiento:6,puntoDeDefensa:0,maxEspecial:3,activo:true},
     {type:'SC #2',cantidad:1,ataque:0,maxAtaque:1,defensa:0,maxDefensa:1,tactica:0,maxTactica:3,movimiento:1,maxMovimiento:6,puntoDeDefensa:0,maxEspecial:3,activo:true},
     {type:'SC #3',cantidad:1,ataque:0,maxAtaque:1,defensa:0,maxDefensa:1,tactica:0,maxTactica:3,movimiento:1,maxMovimiento:6,puntoDeDefensa:0,maxEspecial:3,activo:true},
@@ -93,9 +93,9 @@ export const flota  = [
     {type:'SW #1',cantidad:1,ataque:0,maxAtaque:1,defensa:0,maxDefensa:1,tactica:0,maxTactica:3,movimiento:1,maxMovimiento:6,dragaminas:1,maxEspecial:2,activo:false},
     {type:'SW #2',cantidad:1,ataque:0,maxAtaque:1,defensa:0,maxDefensa:1,tactica:0,maxTactica:3,movimiento:1,maxMovimiento:6,dragaminas:1,maxEspecial:2,activo:false},
     {type:'SW #3',cantidad:1,ataque:0,maxAtaque:1,defensa:0,maxDefensa:1,tactica:0,maxTactica:3,movimiento:1,maxMovimiento:6,dragaminas:1,maxEspecial:2,activo:false},
-    {type:'SY',cantidad:1,ataque:0,maxAtaque:0,defensa:0,maxDefensa:0,tactica:0,maxTactica:0,movimiento:0,maxMovimiento:0,activo:true},
-    {type:'SY',cantidad:1,ataque:0,maxAtaque:0,defensa:0,maxDefensa:0,tactica:0,maxTactica:0,movimiento:0,maxMovimiento:0,activo:true},
-    {type:'SY',cantidad:1,ataque:0,maxAtaque:0,defensa:0,maxDefensa:0,tactica:0,maxTactica:0,movimiento:0,maxMovimiento:0,activo:true},
-    {type:'SY',cantidad:1,ataque:0,maxAtaque:0,defensa:0,maxDefensa:0,tactica:0,maxTactica:0,movimiento:0,maxMovimiento:0,activo:true}
+    {type:'SY #1',cantidad:1,ataque:0,maxAtaque:0,defensa:0,maxDefensa:0,tactica:0,maxTactica:0,movimiento:0,maxMovimiento:0,activo:true},
+    {type:'SY #2',cantidad:1,ataque:0,maxAtaque:0,defensa:0,maxDefensa:0,tactica:0,maxTactica:0,movimiento:0,maxMovimiento:0,activo:true},
+    {type:'SY #3',cantidad:1,ataque:0,maxAtaque:0,defensa:0,maxDefensa:0,tactica:0,maxTactica:0,movimiento:0,maxMovimiento:0,activo:true},
+    {type:'SY #4',cantidad:1,ataque:0,maxAtaque:0,defensa:0,maxDefensa:0,tactica:0,maxTactica:0,movimiento:0,maxMovimiento:0,activo:true}
   ];
   

@@ -11,7 +11,8 @@
         "TECNOLOGY": "Tecnología",
         "COLONY": "Colonias",
         "PAY": "Ingresos",
-        "MENU": "Principal"
+        "MENU": "Principal",
+        "NEW": "Nueva partida"
     },
     "TEC":{
         "NAVESGRANDES": "Naves grandes",

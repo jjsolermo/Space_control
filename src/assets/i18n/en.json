@@ -11,7 +11,8 @@
         "TECNOLOGY": "Tecnology",
         "COLONY": "Colonies",
         "PAY": "Income",
-        "MENU": "Main"
+        "MENU": "Main",
+        "NEW": "New game"
     },
     "TEC":{
         "NAVESGRANDES": "Big ships",

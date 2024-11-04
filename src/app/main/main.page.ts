@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { StorageService } from '../services/storage.service';
 import { constants, flota } from '../share/constants';
 import { find } from 'rxjs';
+import { tick } from '@angular/core/testing';
 
 
 @Component({
@@ -36,18 +37,20 @@ export class MainPage implements OnInit {
 
   constructor(private router: Router,private storage: StorageService) { }
   ngOnInit(): void {
-    this.storage.get('game').then((val) => {
-      if(val!=null){
-        console.log('game', val);
-      }
-    })
+    
   }
 
   ionViewWillEnter(){
-
-    this.inicioPartida();
+    
+    this.CargarDatos();
 
   }
+
+  newGame(){
+    this.inicioPartida();
+  }
+
+
   navegarA(id: number) {
     switch (id) {
       case 1:
@@ -132,7 +135,99 @@ export class MainPage implements OnInit {
     this.router.navigateByUrl('/main', { skipLocationChange: true }).then(() => {
       this.router.navigate([this.router.url]);
     });
-    //await this.inicioPartida();
+    await this.inicioPartida();
   }
+
+  CargarDatos(){
+    this.storage.get('game').then((val) => {
+      if(val!=null){
+        console.log('game', val);
+      }
+    })
+    this.storage.get(constants.total).then((val) => {
+      if(val!=null){
+        this.total = val;
+      }
+    });
+    this.storage.get(constants.NavesGrandes).then((val) => {
+      if(val!=null){
+        this.NavesGrandes = val;
+      }
+    });
+    this.storage.get(constants.Ataque).then((val) => {
+      if(val!=null){
+        this.Ataque = val;
+      }
+    });
+    this.storage.get(constants.Defensa).then((val) => {
+      if(val!=null){
+        this.Defensa = val;
+      }
+    });
+    this.storage.get(constants.Tactica).then((val) => {
+      if(val!=null){
+        this.Tactica = val;
+      }
+    });
+    this.storage.get(constants.Movimiento).then((val) => {
+      if(val!=null){
+        this.Movimiento = val;
+      }
+    });
+    this.storage.get(constants.Terraformación).then((val) => {
+      if(val!=null){
+        this.Terraformacion = val;
+      }
+    });
+    this.storage.get(constants.Exploración).then((val) => {
+      if(val!=null){
+        this.Exploracion = val;
+      }
+    });
+    this.storage.get(constants.Astilleros).then((val) => {
+      if(val!=null){
+        this.Astilleros = val;
+      }
+    });
+    this.storage.get(constants.PuntoDeDefensa).then((val) => {
+      if(val!=null){
+        this.Punto = val;
+      }
+    });
+    this.storage.get(constants.Cazas).then((val) => {
+      if(val!=null){
+        this.Cazas = val;
+      }
+    });
+    this.storage.get(constants.Ocultación).then((val) => {
+      if(val!=null){
+        this.Ocultacion = val;
+      }
+    });
+    this.storage.get(constants.Detección).then((val) => {
+      if(val!=null){
+        this.Deteccion = val;
+      }
+    });
+    this.storage.get(constants.Minas).then((val) => {
+      if(val!=null){
+        this.Minas = val;
+      }
+    });
+    this.storage.get(constants.Dragaminas).then((val) => {
+      if(val!=null){
+        this.Dragaminas = val;
+      }
+    });
+    this.storage.get(constants.Flota).then((val) => {
+      if(val!=null){
+        this.flota = val;
+        this.results = this.flota;
+      }
+    });
+    
+  }
+
+  
 }
  

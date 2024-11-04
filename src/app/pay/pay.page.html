@@ -25,4 +25,13 @@
       <ion-label><ion-icon name="home-outline" class="icon-list-custom"></ion-icon>{{'MAIN.MENU' | translate}}</ion-label>
     </ion-item>
   </ion-list>
+
+  <div style="display: flex;">
+    <ion-item>
+      <ion-input class="tec" label="Ajustar total" [(ngModel)]="totalTemp"></ion-input>
+    </ion-item>
+  </div>
+  <div style="display: flex;">
+    <ion-button class="tecButton" (click)="save()">Actualizar</ion-button>
+  </div>
 </ion-content>
